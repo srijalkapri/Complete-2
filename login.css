@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #212b38;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 40px;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #424242;
+    font-size: 25px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 15px 2px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 22px;
+}
+
+.login-container button {
+    width: 50%;
+    padding: 15px;
+    background-color: #f77f00;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.login-container button:hover {
+    background-color:#212b38;
+}
+
+.forgot-password {
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    color: #f77f00;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.forgot-password a:hover {
+    color: #3879c0;
+}
+
+.social-login {
+    margin-top: 20px;
+}
+
+.social-login p {
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 20px;
+}
+
+.social-login a {
+    margin: 0 10px;
+    font-size: 30px;
+    color: #4b4b4b;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-login a:hover {
+    color: #212b38;
+}
+
+.create-account {
+    margin-top: 20px;
+}
+
+.create-account p {
+    color: #666;
+    font-size: 20px;
+}
+
+.create-account a {
+    color: #f77f00;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.create-account a:hover {
+    color: #3879c0;
+}
