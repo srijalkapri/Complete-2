@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Service</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <h1 class="topic">Book Service</h1>
+    <div class="booking-container">
+        <form action="submit_booking.php" method="POST" class="booking-form">
+            <div class="form-group">
+                <label for="service">Service:</label>
+                <input type="text" id="service" name="service" readonly>
+            </div>
+            <div class="form-group">
+                <label for="datetime">Preferred Date & Time:</label>
+                <input type="datetime-local" id="datetime" name="datetime" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" placeholder="Enter your address" required>
+            </div>
+            <div class="form-group">
+                <label for="working-hours">Working Hours:</label>
+                <select id="working-hours" name="working-hours" required>
+                    <option value="8-10am">8 AM - 10 AM</option>
+                    <option value="10-12pm">10 AM - 12 PM</option>
+                    <option value="12-2pm">12 PM - 2 PM</option>
+                    <option value="2-4pm">2 PM - 4 PM</option>
+                    <option value="4-6pm">4 PM - 6 PM</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="payment">Payment Method:</label>
+                <select id="payment" name="payment" required>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="debit-card">Debit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="cash">Cash</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="description">Description of the Task:</label>
+                <textarea id="description" name="description" rows="4" placeholder="Provide details about the task..." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Book Now</button>
+        </form>
+    </div>
+    <script>
+        // Function to get query parameter value by name
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Set the service input value based on query parameter
+        window.onload = function() {
+            const service = getQueryParam('service');
+            document.getElementById('service').value = service;
+        }
+    </script>
+</body>
+</html>
